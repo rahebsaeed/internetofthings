@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الصف الثاني عشر · الفصل الدراسي الأول · الوحدة الأولى: أسس إنترنت الأشياء · الدرس الثاني: أجهزة إنترنت الأشياء</title>
+<meta name="description" content="درس تفاعلي في مادة التقنية المعلوماتية للصف الثاني عشر: أجهزة إنترنت الأشياء (مستشعرات، مشغلات، وحدات تحكم) — إعداد رهيمة علي راشد الغيثي، التدريس المصغر EDUC4016.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f7fa; --card:#ffffff; --ink:#22252a; --teal:#0b3c49; --teal-2:#0e6b7a;
+    --amber:#ff8c00; --amber-2:#ffd166; --mint:#7fb069; --rose:#c1443c;
+    --grad: linear-gradient(125deg,#0b3c49 0%,#0e6b7a 60%,#14889b 100%);
+  }
+  *{box-sizing:border-box; margin:0; padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Tajawal',system-ui,sans-serif; background:var(--bg); color:var(--ink); line-height:1.9; font-size:17px}
+  h1,h2,h3,.f{font-family:'Cairo',sans-serif}
+  img,video{max-width:100%; display:block}
+  .container{max-width:1080px; margin:0 auto; padding:0 20px}
+  header{background:var(--grad); color:#fff; padding:70px 0 60px; text-align:center; position:relative; overflow:hidden}
+  header::after{content:""; position:absolute; inset:auto 0 -60px 0; height:120px; background:var(--bg); border-radius:50% 50% 0 0 / 100% 100% 0 0}
+  .badge{display:inline-block; background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.35); border-radius:999px; padding:6px 18px; font-size:14px; margin-bottom:18px}
+  header h1{font-size:clamp(28px,5vw,46px); font-weight:900; margin-bottom:12px}
+  header p.sub{font-size:clamp(15px,2.5vw,19px); opacity:.95; max-width:760px; margin:0 auto 26px}
+  .btns{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; position:relative; z-index:2}
+  .btn{display:inline-block; padding:12px 26px; border-radius:999px; text-decoration:none; font-weight:700; font-family:'Cairo',sans-serif; transition:.2s}
+  .btn-amber{background:var(--amber); color:#fff}
+  .btn-ghost{background:rgba(255,255,255,.12); color:#fff; border:1px solid rgba(255,255,255,.5)}
+  .btn:hover{transform:translateY(-2px); box-shadow:0 8px 20px rgba(0,0,0,.18)}
+  nav{position:sticky; top:0; z-index:50; background:#fff; box-shadow:0 2px 12px rgba(0,0,0,.07)}
+  nav .container{display:flex; gap:18px; overflow-x:auto; padding:12px 20px; white-space:nowrap}
+  nav a{color:var(--teal); text-decoration:none; font-weight:500; font-size:15px; padding:4px 2px; border-bottom:2px solid transparent}
+  nav a:hover{border-color:var(--amber); color:var(--amber)}
+  section{padding:56px 0 8px}
+  .sec-title{font-size:clamp(22px,3.5vw,30px); color:var(--teal); font-weight:900; margin-bottom:6px; display:flex; align-items:center; gap:12px}
+  .sec-title .dot{width:14px; height:14px; border-radius:50%; background:var(--amber); flex:none}
+  .lead{max-width:900px; color:#3c4148; margin-bottom:26px}
+  .grid{display:grid; gap:18px}
+  .g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .g4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+  .card{background:var(--card); border-radius:18px; padding:20px; box-shadow:0 4px 16px rgba(11,60,73,.07); border-top:4px solid var(--teal-2)}
+  .card h3{color:var(--teal); font-size:18px; margin-bottom:8px}
+  .card p{font-size:15.5px; color:#444b52}
+  .card img{border-radius:12px; margin-bottom:12px; height:160px; width:100%; object-fit:cover; background:#e8eef2}
+  .chip{display:inline-block; background:#e8f2f4; color:var(--teal-2); border-radius:999px; padding:2px 12px; font-size:13px; margin:2px 0 8px}
+  .cite{font-size:12px; color:#7a828a; margin-top:8px; display:block}
+  .cite a{color:#6d7d86}
+  .strip{background:var(--teal); color:#fff; border-radius:20px; padding:28px; margin:26px 0}
+  .strip h3{color:var(--amber-2); font-size:20px; margin-bottom:10px}
+  .strip ul{margin-right:20px}
+  .strip li{margin-bottom:8px}
+  .media-row{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px}
+  .media-row figure{background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 4px 14px rgba(0,0,0,.07)}
+  .media-row figcaption{padding:10px 14px; font-size:14px; color:#555}
+  video{width:100%; background:#000; border-radius:16px}
+  .quiz{background:linear-gradient(135deg,#fff8ec,#fff); border:2px dashed var(--amber); border-radius:20px; padding:26px}
+  .q{margin-bottom:18px; padding-bottom:14px; border-bottom:1px dotted #d9c9a8}
+  .q:last-of-type{border:none}
+  .q p.qtext{font-weight:700; margin-bottom:10px}
+  .opts{display:flex; gap:10px; flex-wrap:wrap}
+  .opt{padding:8px 20px; border-radius:10px; border:2px solid var(--teal-2); background:#fff; color:var(--teal); cursor:pointer; font-family:'Tajawal'; font-size:15px; font-weight:500}
+  .opt.ok{background:var(--mint); border-color:var(--mint); color:#fff}
+  .opt.no{background:var(--rose); border-color:var(--rose); color:#fff}
+  .fb{margin-top:8px; font-size:14.5px; min-height:22px}
+  .score{background:#fff; border-radius:14px; padding:14px 20px; font-family:'Cairo'; font-weight:700; color:var(--teal); text-align:center; font-size:18px}
+  table{width:100%; border-collapse:collapse; background:#fff; border-radius:14px; overflow:hidden; box-shadow:0 4px 14px rgba(0,0,0,.06); font-size:15.5px}
+  th{background:var(--teal); color:#fff; padding:12px; font-family:'Cairo'}
+  td{padding:10px 12px; border-bottom:1px solid #e7edf0; text-align:right}
+  tr:nth-child(even) td{background:#f6fafb}
+  ol.refs{margin-right:22px; font-size:15px; color:#3c4148}
+  ol.refs li{margin-bottom:10px}
+  footer{background:var(--teal); color:#cfe0e5; margin-top:60px; padding:36px 0; font-size:14.5px}
+  footer a{color:var(--amber-2)}
+  .tag-own{background:#eaf6ee; color:#2f6b3f; border:1px solid #bfe0c9}
+  @media (max-width:640px){ body{font-size:16px} .container{padding:0 14px} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <span class="badge">مقرر التدريس المصغر — EDUC4016</span>
+    <h1>أجهزة إنترنت الأشياء</h1>
+    <p class="sub">درس تفاعلي للصف الثاني عشر — مادة التقنية المعلوماتية — الفصل الدراسي الأول — الوحدة الأولى: أسس إنترنت الأشياء · الدرس الثاني: أجهزة إنترنت الأشياء.
+    عرض مصغّر لحصة واحدة (60 دقيقة) مدعوم بالصور والمقاطع التجريبية والأنشطة الصفية.</p>
+    <div class="btns">
+      <a class="btn btn-amber" href="#lesson">ابدأ الدرس</a>
+      <a class="btn btn-ghost" href="#activity">جرّب النشاط</a>
+      <a class="btn btn-ghost" href="#report">التقرير التحليلي</a>
+    </div>
+    <p style="margin-top:22px; font-size:14px; opacity:.85">إعداد الطالبة: رهيمة علي راشد الغيثي — الرقم الجامعي 260335 — بإشراف د. أحمد الحوسني</p>
+  </div>
+</header>
+
+<nav><div class="container">
+  <a href="#about">عن الدرس</a><a href="#objectives">الأهداف</a><a href="#lesson">أجهزة IoT</a>
+  <a href="#components">المكونات الأربعة</a><a href="#sensors">المستشعرات</a><a href="#actuators">المشغلات</a>
+  <a href="#videos">تجارب مصوّرة</a><a href="#activity">نشاط تفاعلي</a><a href="#report">التقرير التحليلي</a>
+  <a href="#refs">المصادر</a>
+</div></nav>
+
+<section id="about"><div class="container">
+  <h2 class="sec-title"><span class="dot"></span>عن الدرس</h2>
+  <p class="lead">يتناول هذا الدرس <strong>أجهزة إنترنت الأشياء</strong> بوصفها المكوّن المادي الذي يمنح الأنظمة القدرة على «الإحساس بالعالم» و«التفاعل معه». يبدأ من فكرة <em>الكائن الذكي</em>، ثم يبني عليها المكونات الأربعة (مستشعر، مشغل، وحدة تحكم، مصدر طاقة)، وينتهي باختيار الجهاز المناسب لمشكلة واقعية. المحتوى مأخوذ من الكتاب المدرسي المعتمد للصف الثاني عشر، والوسائط معزّزة بصور تجريبية ومقاطع قصيرة مع أرقام المصدر.</p>
+  <div class="strip">
+    <h3>خطة الحصة (60 دقيقة)</h3>
+    <ul>
+      <li><b>0 – 5</b> تهيئة: ألغاز منطقية + سؤال يومي (متى شغّلتَ مكيفك عن بُعد؟)</li>
+      <li><b>5 – 12</b> تمهيد: ما هو إنترنت الأشياء؟ ولماذا تُصنَّف الأجهزة؟ + خريطة الوحدة</li>
+      <li><b>12 – 40</b> العرض الرئيس: الكائن الذكي ← التصنيفات ← المكونات ← المستشعرات ← المشغلات</li>
+      <li><b>40 – 50</b> أنشطة: صحيحة/خاطئة بالتصويت + اختيار المشغل المناسب + تحليل مقاطع تجريبية</li>
+      <li><b>50 – 60</b> تقويم ختامي (سؤالان) + واجب: نصيحة مكتوبة لشركة رقمية لتحسين منتج ذكي</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="objectives"><div class="container">
+  <h2 class="sec-title"><span class="dot"></span>أهداف الدرس</h2>
+  <div class="grid g4">
+    <div class="card"><h3>هدف معرفي 1</h3><p>أن يعرّف الطالب <b>الكائن الذكي</b> ويميّزه عن الكائن المُتحكَّم فيه عن بُعد.</p></div>
+    <div class="card"><h3>هدف معرفي 2</h3><p>أن يعدّد <b>ستة معايير</b> لتصنيف الأجهزة إلى كائنات ذكية.</p></div>
+    <div class="card"><h3>هدف معرفي 3</h3><p>أن يبيّن المكونات <b>الرئيسية الأربعة</b> لأي جهاز ذكي ووظيفة كل منها.</p></div>
+    <div class="card"><h3>هدف مهاري</h3><p>أن يصنّف ثلاثة أمثلة من الصور كمُدخلات أو مُخرجات، ويختار الجهاز المناسب لمشكلة واقعية.</p></div>
+  </div>
+</div></section>
+
+<section id="lesson"><div class="container">
+  <h2 class="sec-title"><span class="dot"></span>أجهزة إنترنت الأشياء حولنا</h2>
+  <p class="lead">أمثلة حقيقية من الكتاب: الحاسب، الهاتف الذكي، الساعة الذكية، السماعة الذكية. اختر أي جهاز في بيتك: هل يكتفي بالاستجابة لأوامرك المباشرة، أم يقيس ويقرر ويتعلّم؟</p>
+  <div class="grid g3">
+    <div class="card"><span class="chip">ساعة ذكية</span>
+      <img src="media/photos/smartwatch.jpg" alt="ساعة ذكية على المعصم">
+      <p>تتابع النشاط وتقيسه؛ جهاز يستشعر ويوصلك بنتائجك لحظيًّا.</p>
+      <span class="cite">المصدر: Wikimedia Commons — «Smartwatch on wrist»</span></div>
+    <div class="card"><span class="chip">وحدة تحكم Wi-Fi</span>
+      <img src="media/photos/esp01.jpg" alt="وحدة تحكم ESP-01">
+      <p>قلب الجهاز الذكي الصغير: تصل بالشبكة وتستقبل الأوامر.</p>
+      <span class="cite">المصدر: Wikimedia Commons — «ESP-01»</span></div>
+    <div class="card"><span class="chip">لوحة Arduino</span>
+      <img src="media/photos/arduino.jpg" alt="لوحة أردوينو">
+      <p>وحدة تحكم شائعة تُستخدم في مختبرات المدارس لبناء النماذج.</p>
+      <span class="cite">المصدر: Wikimedia Commons — «Arduino»</span></div>
+  </div>
+  <div class="strip">
+    <h3>ستة معايير لتصنيف الكائنات الذكية (من الكتاب)</h3>
+    <p>قادر على الاتصال بالإنترنت • يحتوي على معالج/ذاكرة (بيانات وبرامج) • مزوّد بمجموعة مستشعرات ومُشمِّسات • يستطيع التفاعل مع مُستخدمين آخرين • يتفاعل مع البيئة المحيطة • يأخذ ويتخذ القرارات.</p>
+    <p style="margin-top:10px"><b>أمثلة من الكتاب:</b> الهاتف الذكي، الساعات والأحذية الذكية، الكاميرات الذكية، السيارات ذاتية القيادة، الثلاجات والأفران والمكيّفات الذكية، الروبوتات والطائرات بدون طيار، الري الذكي.</p>
+  </div>
+</div></section>
+
+<section id="components"><div class="container">
+  <h2 class="sec-title"><span class="dot"></span>المكونات الرئيسية لأي جهاز ذكي</h2>
+  <p class="lead">لكل جهاز ذكي أربعة مكونات لا بدّ منها، ومن أتقن هذه الأربعة فهم أي جهاز يراه أمامه في البيت أو الشارع أو المزرعة.</p>
+  <div class="grid g4">
+    <div class="card"><h3>1) المستشعر (Sensor)</h3><p>مُدخل البيانات: يلتقط معلومة من البيئة (حرارة، رطوبة، حركة، ضوء) ويرسلها للوحدة.</p></div>
+    <div class="card"><h3>2) المشغل (Actuator)</h3><p>مُخرج البيانات: ينفّذ أمرًا فيزيائيًّا (تشغيل مصباح، فتح صمام، تحريك محرّك).</p></div>
+    <div class="card"><h3>3) وحدة التحكم</h3><p>المُعالج: تستقبل بيانات المستشعر، تقارنها بقواعد، ثم تصدر أمرًا للمشغل.</p></div>
+    <div class="card"><h3>4) مصدر الطاقة</h3><p>بطارية، كهرباء، أو طاقة شمسية (كاللوح الشمسي المستخدم في الأنظمة الزراعية).</p></div>
+  </div>
+  <figure style="margin-top:22px">
+    <img src="media/gifs/data_cycle.gif" alt="دورة بيانات إنترنت الأشياء: استشعار ثم اتصال ثم تحليل ثم اتخاذ قرار ثم تنفيذ" style="border-radius:18px; box-shadow:0 6px 20px rgba(0,0,0,.12)">
+    <span class="cite">رسم توضيحي من إعداد الطالبة للمشروع — يوضح دورة مرور البيانات في نظام إنترنت الأشياء.</span>
+  </figure>
+</div></section>
+
+<section id="sensors"><div class="container">
+  <h2 class="sec-title"><span class="dot"></span>المستشعرات: حواس الجهاز الذكي</h2>
+  <p class="lead">المستشعر هو المُدخل الأساسي؛ بدونه يظل الجهاز «أعمى» و«أصمّ». تُصنَّف المستشعرات حسب المعلومات التي تلتقطها، ومن أمثلتها على مستوى المكوّنات: المحول الضوئي، حساس الحرارة، حساس الرطوبة، حساس الحركة، حساس الموجات فوق الصوتية.</p>
+  <div class="grid g3">
+    <div class="card"><img src="media/photos/dht11.jpg" alt="حساس حرارة ورطوبة DHT11"><h3>DHT11 — حرارة ورطوبة</h3><p>يقيس درجة الحرارة والنسبة المئوية للرطوبة؛ يُستخدم في الزراعة الذكية والمناخ المنزلي.</p><span class="cite">المصدر: Wikimedia Commons — «DHT11»</span></div>
+    <div class="card"><img src="media/photos/hcsr04.jpg" alt="حساس موجات فوق صوتية HC-SR04"><h3>HC-SR04 — موجات فوق صوتية</h3><p>يقيس المسافة بالصوت مثل الرادار؛ يُستخدم في قياس منسوب الماء أو تجنّع العوائق.</p><span class="cite">المصدر: Wikimedia Commons — «HC-SR04»</span></div>
+    <div class="card"><img src="media/photos/pir.jpg" alt="حساس حركة PIR"><h3>PIR — حركة</h3><p>يكشف الحركة (أشعة تحت الحمراء)؛ يُستخدم في أنظمة الإنذار والإضاءة التلقائية.</p><span class="cite">المصدر: Wikimedia Commons — «PIR sensor»</span></div>
+  </div>
+  <figure style="margin-top:22px">
+    <img src="media/gifs/ultrasonic.gif" alt="رسم متحرك لموجات الحساس فوق الصوتية وهي تقيس المسافة" style="border-radius:18px; box-shadow:0 6px 20px rgba(0,0,0,.12)">
+    <span class="cite">رسم متحرك من إعداد الطالبة: إرسال موجة صوتية وقياس زمن عودتها لحساب المسافة.</span>
+  </figure>
+</div></section>
+
+<section id="actuators"><div class="container">
+  <h2 class="sec-title"><span class="dot"></span>المشغلات: عضلات الجهاز الذكي</h2>
+  <p class="lead">إن كان المستشعر هو الحواس، فالمشغل هو العضلات. يُصنَّف المشغل حسب إنتاجه: مُخرِجات ضوئية (مصابيح LED)، مُخرِجات صوتية (جُرس، مكبر صوت)، مُخرِجات كهرومغناطيسية (مثبّت، قاطع)، مُخرِجات حرارية (سخّان، مبرّد).</p>
+  <div class="grid g3">
+    <div class="card"><img src="media/photos/servo.jpg" alt="محرك سيرفو صغير"><h3>محرّك سيرفو</h3><p>مُخرج حركي بزاوية محددة: يفتح ويُغلق، يميل، يتحكّم في اتجاه الكاميرا.</p><span class="cite">المصدر: Wikimedia Commons — «Servo motor»</span></div>
+    <div class="card"><img src="media/gifs/power.gif" alt="رسم متحرك لمصباح LED يضيء"><h3>مصباح LED</h3><p>أبسط مُخرج ضوئي؛ تُستخدم مصابيح LED في أغلب الأجهزة المنزلية الذكية.</p><span class="cite">رسم متحرك من إعداد الطالبة (الإصدار الأصلي متوفر على Wikimedia Commons).</span></div>
+    <div class="card"><img src="media/photos/irrigation.jpg" alt="ري ذكي في حقل زراعي"><h3>صمام ري كهرومغناطيسي</h3><p>ينفّذ قرار الري في النظام الزراعي الذكي فور قياس الحساس للرطوبة.</p><span class="cite">المصدر: Wikimedia Commons — «Field irrigation spraying»</span></div>
+  </div>
+</div></section>
+
+<section id="videos"><div class="container">
+  <h2 class="sec-title"><span class="dot"></span>تجارب مصوّرة من المختبر</h2>
+  <p class="lead">قبل التشغيل: توقّعوا ماذا سيحدث؟ بعده: هل تحقّق توقّعكم؟ هذان المقطعان يحوّلان الشرح إلى ملاحظة تحليلية.</p>
+  <div class="media-row">
+    <figure><video controls preload="metadata" src="media/videos/ultrasonic_demo.mp4"></video>
+      <figcaption>تجربة حساس الموجات فوق الصوتية (HC-SR04) على لوحة أردوينو — قياس المسافة لحظيًّا.
+      <span class="cite">المصدر: Wikimedia Commons (رخصة حسب الملف الأصلي).</span></figcaption></figure>
+    <figure><video controls preload="metadata" src="media/videos/antenna_tracker.mp4"></video>
+      <figcaption>تتبّع حركة بهوائي باستخدام محرّك سيرفو — مثال عملي على مشغّل ينفّذ قرار وحدة التحكم.
+      <span class="cite">المصدر: Wikimedia Commons (رخصة حسب الملف الأصلي).</span></figcaption></figure>
+  </div>
+</div></section>
+
+<section id="activity"><div class="container">
+  <h2 class="sec-title"><span class="dot"></span>نشاط تفاعلي: صحيح أم خاطئ؟</h2>
+  <p class="lead">جرّب نفس نشاط الحصة: اختر إجابتك، وستظهر لك التغذية الراجعة فورًا.</p>
+  <div class="quiz" id="quiz">
+    <div class="q" data-a="1"><p class="qtext">1. كل كائن مُتحكَّم فيه عن بُعد يُعدّ بالضرورة كائنًا ذكيًّا.</p>
+      <div class="opts"><button class="opt" data-i="0">صحيح</button><button class="opt" data-i="1">خاطئ</button></div><p class="fb"></p></div>
+    <div class="q" data-a="0"><p class="qtext">2. المستشعر هو المُدخل والمشغل هو المُخرج في نظام إنترنت الأشياء.</p>
+      <div class="opts"><button class="opt" data-i="0">صحيح</button><button class="opt" data-i="1">خاطئ</button></div><p class="fb"></p></div>
+    <div class="q" data-a="0"><p class="qtext">3. زر التشغيل البسيط في الدرج يعدّ جهاز إنترنت أشياء (ذكي).</p>
+      <div class="opts"><button class="opt" data-i="0">صحيح</button><button class="opt" data-i="1">خاطئ</button></div><p class="fb"></p></div>
+    <div class="q" data-a="1"><p class="qtext">4. في نظام الري الذكي، الصمام الكهرومغناطيسي يُعدّ مُدخلًا (مستشعرًا).</p>
+      <div class="opts"><button class="opt" data-i="0">صحيح</button><button class="opt" data-i="1">خاطئ</button></div><p class="fb"></p></div>
+    <div class="q" data-a="0"><p class="qtext">5. الحاسوب وشبكة الإنترنت وقواعد البيانات من المكونات اللازمة لإنترنت الأشياء.</p>
+      <div class="opts"><button class="opt" data-i="0">صحيح</button><button class="opt" data-i="1">خاطئ</button></div><p class="fb"></p></div>
+    <div class="score" id="score">نتيجتك: 0 / 5</div>
+  </div>
+  <p style="margin-top:12px; font-size:15px; color:#5a636b">هذه الأسئلة مأخوذة من تمارين الكتاب المدرسي (التمرين 7 من الدرس الثاني) مع تعديل الصياغة للنشاط التفاعلي.</p>
+</div></section>
+
+<section id="report"><div class="container">
+  <h2 class="sec-title"><span class="dot"></span>التقرير التحليلي والتأملي (نسخة مختصرة)</h2>
+  <p class="lead">ملخص التقرير المرفق (DOCX) وفق النقاط المطلوبة في المهمة. النص الكامل مع المراجع في ملف التقرير.</p>
+  <div class="grid g3">
+    <div class="card"><h3>1) دور المحتوى التفاعلي ومهارات القرن 21</h3><p>المحتوى التفاعلي ينقل الطالب من مستمع إلى مشارك: كل شريحة فكرة واحدة + مشاركة سريعة (تصويت صامت، ثنائيات). صُقلت مهارات التفكير الناقد وحل المشكلات والتعاون والابتكار داخل أهداف الدرس، وأُضيف وعي بالخصوصية عند مناقشة الكاميرات الذكية.</p></div>
+    <div class="card"><h3>2) الجمهور المستهدف</h3><p>طلاب الصف الثاني عشر (17–18 سنة) في الفصل الأول: جيل يتعلم بالصورة والفيديو ويتأثر بالسياق اليومي. صُمّم لكل فكرة ثلاث قنوات (نص + صورة مسمّاة + حركة) مراعاةً لتنوّع أنماط التعلم وطولي انتباه الطلاب.</p></div>
+    <div class="card"><h3>3) سبب اختيار الدرس</h3><p>الشغف الشخصي بال الإلكترونيات، وموقع الدرس بوصفه مدخل الوحدة (كل ما بعده يقوم على مفرداته)، وملاءمته للواقع العماني (المدن الذكية، الري، الطاقة)، وندرة الموارد العربية الجاهزة الموثّقة.</p></div>
+    <div class="card"><h3>4) المخرجات المتوقعة</h3><p>معرفي: تعريف وتصنيف وتمييز. مهاري: اختيار الحساس/المشغل المناسب لمشكلة واقعية وربط الكاميرا بالتصوير والمصباح بالضوء والصمام بالتحكم. وقدري: تقدير أثر التقنية ووعي بالخصوصية. شرط النجاح المقترح في التقويم: 70% فأعلى.</p></div>
+    <div class="card"><h3>5) التحديات وتغلّبي عليها</h3><p>كثرة المصطلحات ← رشّدت العدد وسمّيت الصور بالعربية والإنجليزية. ضعف خلفية البرمجة ← ألغاز منطقية بلا معادلات. ندرة الأجهزة ← مقاطع تجربة موثّقة + محاكاة Tinkercad. ضيق الزمن ← توقيت لكل شريحة في ملاحظات المعلمة. تشتّت الانتباه ← سؤال تفاعلي كل 4–5 شرائح.</p></div>
+    <div class="card"><h3>6) اقتراحات للمعلمين</h3><p>ابدأ بسؤال يومي محفّز، اجعل كل شريحة فكرة واحدة، استخدم الفيديو كمصدر للسؤال لا كزينة، فعّل التصويت الصامت، وفّر ملف PDF للغائبين، حدّد زمن النشاط بمؤقّت ظاهر، واختم بواجب يربط الدرس ببيت الطالب.</p></div>
+  </div>
+</div></section>
+
+<section id="refs"><div class="container">
+  <h2 class="sec-title"><span class="dot"></span>المصادر والمراجع</h2>
+  <ol class="refs">
+    <li>وزارة التربية والتعليم (2022). مادة التقنية المعلوماتية — الصف الثاني عشر، الفصل الأول. سلطنة عُمان.</li>
+    <li>اللجنة الوطنية لرؤية عُمان 2040 (2021). وثيقة رؤية عُمان 2040 — المحور الرقمي.</li>
+    <li>Cisco — Internet of Everything (IoE): cisco.com</li>
+    <li>ARM Education — The IoT Handbook: arm.com/education</li>
+    <li>Arduino — Getting Started: arduino.cc</li>
+    <li>Raspberry Pi Foundation — What is a Raspberry Pi؟ raspberrypi.org</li>
+    <li>Espressif Systems — ESP8266: espressif.com</li>
+    <li>World Economic Forum (2020). The Future of Jobs Report 2020.</li>
+    <li>Battelle for Kids / P21 (2019). Framework for 21st Century Learning.</li>
+    <li>UNESCO (2021). Artificial Intelligence and Education: Guidance for Policy-Makers.</li>
+    <li>Resnick, M. (2017). Lifelong Kindergarten. MIT Press.</li>
+    <li>Felder, R. M., & Brent, R. (2016). Teaching and Learning STEM. Jossey-Bass.</li>
+    <li>Blum, J. (2012). Practical Arduino Engineering. Apress.</li>
+    <li>Gubbi, J., et al. (2013). Internet of Things (IoT): A vision… Future Generation Computer Systems, 29(7).</li>
+    <li>UNESCO (2023). Global Education Monitoring Report — Technology in Education.</li>
+  </ol>
+  <p style="font-size:15px">صور ومقاطع تجريبية: منصة Wikimedia Commons — تُعرض تحت الرخصة المذكورة في الملف الأصلي لكل صورة/مقطع. الرسوم المتحركة (GIF) وخلفيات العرض من إعداد الطالبة لهذا المشروع.</p>
+</div></section>
+
+<footer><div class="container">
+  <p><b>درس أجهزة إنترنت الأشياء</b> — التقنية المعلوماتية، الصف الثاني عشر، الوحدة الأولى (أسس إنترنت الأشياء) — إعداد: رهيمة علي راشد الغيثي (260335) — مقرر التدريس المصغر EDUC4016 — بإشراف د. أحمد الحوسني.</p>
+  <p style="margin-top:8px">هذه الصفحة مرافقة للعرض التعليمي (PowerPoint 17 شريحة) والتقرير التحليلي (Word). الوسائط معنونة بأرقام المصادر في كل شريحة وقسم.</p>
+</div></footer>
+
+<script>
+(function(){
+  var score = 0, answered = 0;
+  var fbText = ["أحسنتِ! الإجابة صحيحة.", "ليست صحيحة — راجعي التوضيح في الأعلى."];
+  document.querySelectorAll('#quiz .q').forEach(function(q){
+    var correct = q.dataset.a;
+    q.querySelectorAll('.opt').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        if(q.dataset.done) return;
+        q.dataset.done = "1";
+        answered++;
+        var ok = btn.dataset.i === correct;
+        if(ok){ score++; btn.classList.add('ok'); } else {
+          btn.classList.add('no');
+          q.querySelector('.opt[data-i="'+correct+'"]').classList.add('ok');
+        }
+        q.querySelector('.fb').textContent = ok ? fbText[0] : fbText[1];
+        document.getElementById('score').textContent = "نتيجتك: " + score + " / 5";
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
